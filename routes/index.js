@@ -10,34 +10,12 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/showtable', function(req, res, next){
-  res.render('show_table', {title: 'Table Page', data: peopleArr.all})
+  res.render('show_table', {title: 'Listing All People', data: peopleArr.all})
 });
 
-
-
-
-
-//different show views with iterating in js
-// var details = function(){
-//   var firstNamesToArr = [];
-//   for (var i = 0; i < peopleArr.all.length; i++){
-//     firstNamesToArr.push(peopleArr.all[i].first_name + "<br>" )
-//   };
-//   return firstNamesToArr.join(' ');
-// }
-// router.get('/show2', function(req, res, next) {
-// res.send(details())
-// });
-
-router.get('/show', function(req, res, next) {
-  res.render('index', { title: 'Express', showList: peopleArr.all[0].first_name });
+router.get('/number', function(req, res, next){
+  res.render('show_number', { title: 'Phone Number', phone: data[i].telephone_number})
 });
-
-
-// router.get('/show3', function(req, res, next) {
-//   res.render('index', { title: 'Express', showList: res.send(details())});
-// });
-
 
 
 
